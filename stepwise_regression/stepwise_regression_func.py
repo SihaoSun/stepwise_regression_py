@@ -37,7 +37,7 @@ def stepwise_model_structure(A, X, z, stop_criteria, plot_report):
     
     if plot_report:
         fig = plt.figure(1)
-        plt.plot(z)
+        plt.plot(z, 'b-')
     
     while 1:
         log.append(np.zeros(7))
@@ -143,5 +143,12 @@ def stepwise_model_structure(A, X, z, stop_criteria, plot_report):
             break
         
         step += 1
+    
+    if plot_report:
+        plt.figure(1)
+        plt.xlabel('samples')
+        plt.ylabel('measurements')
+        plt.show()
+        
         
     return k, A , log

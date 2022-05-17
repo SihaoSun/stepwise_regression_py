@@ -9,7 +9,7 @@ def main():
     
     # define measurements
     y = 0.4 + 1.0 * x1 + 0.5 * x2 + 0.2 * x1 * x2
-    z = y
+    z = y + np.random.rand(y.size) * 0.1
     y = np.vstack(y)
     z = np.vstack(z)
     
